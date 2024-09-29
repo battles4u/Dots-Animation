@@ -1,0 +1,45 @@
+body {
+  background: #f1e0e0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.container {
+  background: inherit;
+  height: 30vh;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dot {
+  height: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #ff6b6b;
+  margin: 2px;
+  scale: 0; /* to start the dots from nothing makes pleasing entrance at the begining */
+  animation: fadeinout 2s linear infinite;
+}
+
+.dot1 {
+  /* no delay */
+}
+.dot2 {
+  animation-delay: 0.4s;
+}
+.dot3 {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0.2;
+    scale: 0.2;
+  }
+  50% {
+    opacity: 1;
+    scale: 1;
+  }
+}
